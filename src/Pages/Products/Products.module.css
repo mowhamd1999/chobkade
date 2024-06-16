@@ -1,0 +1,129 @@
+.container {
+  margin: 20px 0px;
+}
+.header {
+  text-align: right;
+  margin: 0px 40px 30px 0px;
+  text-align: right;
+  font-family: Peyda;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 161.749%;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0px;
+  height: auto;
+  position: relative;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+}
+.aside {
+  width: 20%;
+  height: 100vh;
+  background-color: aliceblue;
+  margin: 20px 20px;
+  direction: rtl;
+  border-radius: 15px;
+  padding: 20px;
+  position: sticky;
+  overflow: hidden;
+  position: -webkit-sticky;
+  top: 40px;
+}
+.filter_header {
+  color: #001524;
+  text-align: right;
+  font-family: Peyda;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 161.749%;
+  background-color: aliceblue;
+}
+.title {
+  color: #001524;
+  text-align: right;
+  font-family: Peyda;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 161.749%;
+  background-color: aliceblue;
+  margin: 15px 10px;
+}
+.category_filter {
+  background-color: aliceblue;
+}
+.category_filter_lable {
+  background-color: aliceblue;
+  margin: 0px 10px 0px 10px;
+  font-size: 0.8rem;
+}
+.color_filter {
+  background-color: aliceblue;
+  width: 100%;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+.price_filter {
+  background-color: aliceblue;
+  padding: 5px 10px;
+}
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 0px 20px;
+}
+.price_content {
+  background-color: aliceblue;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+@media (max-width: 700px) {
+  .category_filter_lable {
+    font-size: 0.6rem;
+  }
+  .container {
+    text-align: center;
+  }
+  .header {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+  }
+  .section {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .aside {
+    display: block;
+    width: 30%;
+    height: 90vh;
+    position: sticky;
+    top: 10px;
+    right: 0;
+  }
+  .products {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+  }
+
+  .price {
+    padding: 0px;
+    width: 50%;
+    display: block;
+  }
+}

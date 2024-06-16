@@ -1,0 +1,92 @@
+.product{
+  margin: 0px;
+}
+.card {
+  border-radius: 20px;
+  max-width: 302px;
+  max-height: 382px;
+  background-color: #ece8d0;
+  text-align: center;
+  margin: 20px 20px;
+  flex-grow: 1;
+  flex-basis: 200;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.card img {
+  width: 272px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #ece8d0;
+}
+
+.card .info {
+  padding: 10px;
+  background-color: #ece8d0;
+  border-radius: 20px;
+  position: relative;
+}
+
+.card .name {
+  color: #000;
+  text-align: center;
+  font-family: Peyda;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 161.749%;
+  margin: 0.5em 0;
+  background-color: inherit;
+}
+
+.card .price {
+  color: #707070;
+  text-align: center;
+  font-family: Peyda;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 161.749%;
+  margin: 0.5em 0;
+  background-color: inherit;
+}
+.btn {
+  background-color: #d6cc99;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 0px 20px 0px 20px;
+}
+.card .button {
+  background: #304233;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1em;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+.fix{
+color: #707070;
+text-align: center;
+font-family: Peyda;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 161.749%;
+background-color: #ece8d0;
+direction: rtl;
+}

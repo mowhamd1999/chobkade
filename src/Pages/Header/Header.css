@@ -1,0 +1,130 @@
+@media (max-width: 2000px){
+.header_container {
+  background-color: inherit;
+  display: block;
+  padding: 30px 5rem;
+  direction: rtl;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_ui {
+  display: flex;
+  list-style: none;
+  height: auto;
+}
+.header_li {
+  margin: 0px 20px;
+  padding: 0px 5px;
+  cursor: pointer;
+  border-bottom: 1px solid inherit;
+  
+}
+
+.header_li:hover {
+  border-bottom: 1px solid black;
+}
+.header_icons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header_search{
+    font-size: 1.3rem;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.header_shop_quantity{
+    font-size: 1rem;
+    background-color: red;
+    padding: 0px 4px;
+    color: white;
+    border-radius: 50%;
+}
+.header_shop{
+    font-size: 1.3rem;
+    padding-left: 30px;
+    font-weight: 600;
+}
+.header_profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.menu{
+  display: none;
+  margin: 0px auto;
+  padding: 20px 0px;
+}
+}
+/* media query */
+@media (max-width : 900px) {
+  .header{
+    display: flex;
+    justify-content: center;
+  }
+  .header_ui{
+    font-size: 0.6rem;
+  }
+}
+@media (max-width : 640px) {
+  .header{
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+  .header_ui{
+    padding: 0px;
+    margin: 0px auto;
+    height: 0px;
+    transition: 1s all;
+    overflow: hidden;
+    display: block;
+  }
+  .header_ui_true{
+    list-style: none;
+    padding: 0px;
+    height: 150px;
+    display: block;
+  }
+  .header_li{
+    padding: 10px 0px;
+  }
+  .header_container{
+    padding: 10px 20px;
+  }
+  .menu{
+    display: block;
+  }
+  .header_icons{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.join{
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  
+}
+.join_btn{
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+.logout{
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  offset: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+.logout:hover{
+  color: red;
+}
