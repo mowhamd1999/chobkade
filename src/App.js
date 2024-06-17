@@ -9,6 +9,12 @@ import Main from "./Pages/Main/Main";
 import Products from "./Pages/Products/Products";
 import ContextProducts from "./context/context-products/ContextProducts";
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import Product from "./Pages/Product/Product";
+
+import ScrollToTop from "./helpers/ScrollToTop";
+
+
+
 function App() {
   return (
     <div className="App">
@@ -20,6 +26,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/products" element={<Products />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/products/:id" element={<Product />} />
         </Routes>
       </ContextProducts>
       <Footer />
