@@ -1,3 +1,6 @@
+.product{
+    position: relative;
+}
 .header{
     text-align: center;
     margin: 100px 0px 50px 0px ;
@@ -13,10 +16,44 @@
     font-size: 2rem;
     color: #1D271E;
 }
+.sell_container{
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    background-color: #1D271E;
+    top: 50px;
+    left: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.sell_container_top{
+    display: flex;
+    direction: rtl;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D271E;
+    border-bottom: 1px solid #D6CC99;
+    padding: 0px 0px 15px 0px;
+}
+.sell_picture{
+    width: 60px;
+    height: 60px;
+    background-color: #1D271E;
+}
+.p{
+    font-size: 0.7rem;
+    padding: 4px 5px 4px 0px;
+    color: white;
+    background-color: #1D271E;
+    font-weight: 200;
+}
+.bg{
+    background-color: #1D271E;
+}
 .container{
     display: flex;
     justify-content: center;
-    margin: 0px 0px 100px 0px;
+    margin: 0px 0px 100px 100px;
 }
 .image_div{
     display: flex;

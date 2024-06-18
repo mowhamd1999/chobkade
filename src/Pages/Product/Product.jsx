@@ -17,12 +17,22 @@ const Product = () => {
   const id = useParams();
   const product = products.find((item) => item.id == id.id);
 
- 
   return (
     <div className={style.product}>
       <div className={style.header}>
         <p className={style.p_head}>با چوبکده بهترین کیفیت را تجربه کنید</p>
         <h2 className={style.h2_head}>مشخصات محصول</h2>
+      </div>
+      <div className={style.sell_container}>
+        <div className={style.sell_container_top}>
+          <div className={style.bg}>
+            <img className={style.sell_picture} src={product.picture} alt="" />
+          </div>
+          <div>
+            <p className={style.p}>{product.name}</p>
+            <p className={style.p}>{product.descriptions}</p>
+          </div>
+        </div>
       </div>
       <div className={style.container}>
         <div className={style.div_left}>

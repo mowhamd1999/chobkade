@@ -11,7 +11,7 @@ import ContextProducts from "./context/context-products/ContextProducts";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Product from "./Pages/Product/Product";
 
-import ScrollToTop from "./helpers/ScrollToTop";
+
 
 
 
