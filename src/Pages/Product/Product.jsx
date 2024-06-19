@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import style from "./Product.module.css";
 import { ContextProductsProvider } from "../../context/context-products/ContextProducts";
 import { useParams } from "react-router-dom";
-
 import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 import { MdCategory } from "react-icons/md";
 import { FaDollarSign } from "react-icons/fa6";
@@ -11,6 +10,9 @@ import { IoPricetag } from "react-icons/io5";
 import { IoIosColorPalette } from "react-icons/io";
 import { SlSizeActual } from "react-icons/sl";
 import { GiWeight } from "react-icons/gi";
+
+import MiniBuyBox from './../../Components/MiniBuyBox/MiniBuyBox'
+
 
 const Product = () => {
   const { products } = useContext(ContextProductsProvider);
@@ -24,15 +26,7 @@ const Product = () => {
         <h2 className={style.h2_head}>مشخصات محصول</h2>
       </div>
       <div className={style.sell_container}>
-        <div className={style.sell_container_top}>
-          <div className={style.bg}>
-            <img className={style.sell_picture} src={product.picture} alt="" />
-          </div>
-          <div>
-            <p className={style.p}>{product.name}</p>
-            <p className={style.p}>{product.descriptions}</p>
-          </div>
-        </div>
+      <MiniBuyBox product={product} />
       </div>
       <div className={style.container}>
         <div className={style.div_left}>
