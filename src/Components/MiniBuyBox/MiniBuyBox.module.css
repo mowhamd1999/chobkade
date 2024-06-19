@@ -51,3 +51,42 @@
     color: #D6CC99;
     font-size: 0.7rem;
 }
+.add_btn{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+.add_btn:hover{
+    cursor: pointer;
+}
+.quantity_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D271E;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D271E;
+    direction: rtl;
+    margin-top: 10px;
+}
+.increase_btn{
+    padding: 7px 10px;
+    border: none;
+    border-radius: none;
+    background-color: inherit;
+    color: #D6CC99;
+    font-size: 20px;
+    cursor: pointer;
+}
+.increase_title{
+
+    border: none;
+    border-radius: none;
+    background-color: inherit;
+    color: #D6CC99;
+}

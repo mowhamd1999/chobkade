@@ -1,15 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import style from "./MiniBuyBox.module.css";
 
 import { CiCircleInfo } from "react-icons/ci";
 
-import ContextProducts from "../../context/context-products/ContextProducts";
-
+import { CartContext } from "../../context/context-product/ContextProduct";
 const MiniBuyBox = ({ product }) => {
+  const { state, dispatch } = useContext(CartContext);
+  console.log(state);
 
-  const {state , dispatch} = useContext(ContextProducts)
-
-
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
+  const quantity = state.buys.find(item=> item.id === product.id)
+  console.log(quantity)
+  const data = product
   return (
     <div className={style.bg}>
       <div className={style.sell_container_top}>
@@ -28,7 +32,29 @@ const MiniBuyBox = ({ product }) => {
           <p className={style.toman}>تومان</p>
         </div>
       </div>
-      <button>افزودن به سبد خرید</button>
+      {state.buys.find((item) => item.id === product.id) ? (
+        <div className={style.box}>
+          <div className={style.quantity_box}>
+            <button 
+            className={style.increase_btn}
+            onClick={() => dispatch({type:'decrease_item', payload:quantity})}
+              >-</button>
+            <p className={style.increase_btn}>{quantity.quantity}</p>
+            <button 
+            className={style.increase_btn}
+            onClick={() => dispatch({type:'increase_item', payload:quantity})}
+            >+</button>
+          </div>
+          <p className={style.increase_title}>تعداد در سبد خرید</p>
+        </div>
+      ) : (
+        <button
+          onClick={() => dispatch({ type: "Add_item", payload: data })}
+          className={style.add_btn}
+        >
+          افزودن به سبد خرید
+        </button>
+      )}
     </div>
   );
 };

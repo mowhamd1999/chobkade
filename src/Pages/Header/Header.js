@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import { ContextAuthProvider } from "../../context/context-auth/ContextAuth";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
+import { CartContext } from "../../context/context-product/ContextProduct";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -16,6 +17,8 @@ const Header = () => {
   const { user } = useContext(ContextUserProvider);
   const [logout, setLogout] = useState(false);
 
+  const {state} = useContext(CartContext)
+  const quantity = state.itemCounter
   useEffect(() => {
     setLogout(authentication);
   }, [authentication]);
@@ -62,7 +65,7 @@ const Header = () => {
         <div className="header_icons">
           <IoIosSearch className="header_search" />
           <div>
-            <span className="header_shop_quantity">0</span>
+            <span className="header_shop_quantity">{quantity}</span>
             <CiShoppingCart className="header_shop" />
           </div>
           {logout ? (

@@ -5,7 +5,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import ContextAuth from "./context/context-auth/ContextAuth";
 import ContextUser from "./context/context-user/ContextUser";
-import CartContext from "./context/context-product/ContextProduct";
+import ContextProduct from "./context/context-product/ContextProduct";
 
 import ScrollToTop from "./helpers/ScrollToTop";
 
@@ -14,13 +14,13 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
-      <CartContext>
+      <ContextProduct>
         <ContextUser>
           <ContextAuth>
             <App />
           </ContextAuth>
         </ContextUser>
-      </CartContext>
+      </ContextProduct>
     </BrowserRouter>
   </React.StrictMode>
 );
