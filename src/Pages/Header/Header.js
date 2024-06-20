@@ -10,6 +10,7 @@ import "./Header.css";
 import { ContextAuthProvider } from "../../context/context-auth/ContextAuth";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
 import { CartContext } from "../../context/context-product/ContextProduct";
+import Search from "../../Components/SearchModal/Search";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -63,7 +64,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="header_icons">
-          <IoIosSearch className="header_search" />
+          <Search />
           <div>
             <span className="header_shop_quantity">{quantity}</span>
             <CiShoppingCart className="header_shop" />

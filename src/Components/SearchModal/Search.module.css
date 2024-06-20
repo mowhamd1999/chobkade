@@ -1,0 +1,67 @@
+.ReactModal__Overlay {
+    background-color: rgba(37, 37, 37, 0.75);
+}
+.model{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(54, 54, 54, 0.75);
+}
+/* .ReactModal__Content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+} */
+.li{
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    padding: 10px 0px;
+    cursor: pointer;
+    width: 100%;
+}
+.li:hover{
+    background-color: gray;
+}
+.div_btn{
+    display: flex;
+    align-items: center;
+}
+.search_btn{
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    background-color: inherit;
+    align-items: center;
+    color: black;
+}
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

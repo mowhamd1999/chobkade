@@ -1,12 +1,27 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import style from "./MiniBuyBox.module.css";
 
 import { CiCircleInfo } from "react-icons/ci";
 
 import { CartContext } from "../../context/context-product/ContextProduct";
+import Notifi from "../notificationModule/Notifi";
 const MiniBuyBox = ({ product }) => {
   const { state, dispatch } = useContext(CartContext);
-  console.log(state);
+  const [module , setModule] = useState(false)
+  const onhide = () => {
+    setModule(false)
+  }
+
+
+  const add = () => {
+    dispatch({ type: "Add_item", payload: data })
+    setModule(true)
+    setTimeout(() => {
+      setModule(false)
+    }, 3000);
+  }
+  console.log(module)
+
 
   useEffect(() => {
     console.log(state);
@@ -49,12 +64,13 @@ const MiniBuyBox = ({ product }) => {
         </div>
       ) : (
         <button
-          onClick={() => dispatch({ type: "Add_item", payload: data })}
+          onClick={ add }
           className={style.add_btn}
         >
           افزودن به سبد خرید
         </button>
       )}
+      {module == true && <Notifi onhide={onhide} product={product} />}
     </div>
   );
 };
