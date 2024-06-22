@@ -1,67 +1,116 @@
 .ReactModal__Overlay {
-    background-color: rgba(37, 37, 37, 0.75);
+  background-color: rgba(37, 37, 37, 0.75);
 }
-.model{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(54, 54, 54, 0.75);
+.div {
+  padding-bottom: 10px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
-/* .ReactModal__Content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.75);
-} */
-.li{
-    text-decoration: none;
-    list-style: none;
-    text-align: center;
-    padding: 10px 0px;
-    cursor: pointer;
-    width: 100%;
+.ReactModal__Overlay:after-open {
+  background-color: rgba(54, 54, 54, 0.75);
 }
-.li:hover{
-    background-color: gray;
+.model {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(54, 54, 54, 0.75);
 }
-.div_btn{
-    display: flex;
-    align-items: center;
-}
-.search_btn{
-    width: 20px;
-    height: 20px;
-    padding: 0px;
-    background-color: inherit;
-    align-items: center;
-    color: black;
-}
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+.ReactModal__Content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(54, 54, 54, 0.75);
 }
 
-button:hover {
-    background-color: #0056b3;
+.div_btn {
+  display: flex;
+  align-items: center;
+  background-color: inherit;
+}
+.h2 {
+  background-color: rgba(54, 54, 54, 0.75);
+  color: antiquewhite;
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  border-radius: 20px;
+}
+.input {
+  width: 100%;
+  margin: 30px 0px;
+  text-align: right;
+  padding: 10px 0px;
+  border: none;
+  border-radius: 10px;
+  padding-right: 10px;
+}
+.search_btn {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  background-color: inherit;
+  align-items: center;
+  color: black;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* button:hover {
+  background-color: #0056b3;
+} */
+.close_btn {
+  padding: 0px;
+  display: flex;
+  font-size: 1.7rem;
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: right;
+  margin: 0px 0px 10px 0px;
+}
+.icon_close {
+  background-color: inherit;
+  color: antiquewhite;
+  border-radius: 50%;
+}
+.li {
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  padding: 10px 0px;
+  cursor: pointer;
+  width: 100%;
+  background-color: inherit;
+  
+}
+.div_ul{
+  height: 230px;
+}
+.ul{
+  height: 100%;
+  overflow: overlay;
 }
