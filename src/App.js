@@ -12,10 +12,6 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Product from "./Pages/Product/Product";
 import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart";
 
-
-
-
-
 function App() {
   return (
     <div className="App">

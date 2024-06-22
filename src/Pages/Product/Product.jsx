@@ -19,6 +19,12 @@ const Product = () => {
   const id = useParams();
   const product = products.find((item) => item.id == id.id);
 
+  const formatNumber = (num) => {
+    if (!num) return "";
+    return parseInt(num, 10).toLocaleString();
+  };
+
+
   return (
     <div className={style.product}>
       <div className={style.header}>
@@ -65,7 +71,7 @@ const Product = () => {
                 <h3>فیمت </h3>
               </div>
               <div className={style.body}>
-                <p>{product.price} هزار تومان</p>
+                <p>{formatNumber(product.price)} هزار تومان</p>
               </div>
             </div>
           </div>

@@ -31,13 +31,13 @@ const cardReducer = (state, action) => {
         buys: [...state.buys],
         ...sum(state.buys),
       };
-    case "remove_item":
-      const newBuys = state.buys.filter((item) => item.id !== action.payload.id);
-      return {
-        ...state,
-        buys: [...newBuys],
-        ...sum(state.buys),
-      };
+      case "remove_item":
+        const newBuys = state.buys.filter((item) => item.id !== action.payload.id);
+        return {
+          ...state,
+          buys: [...newBuys],
+          ...sum(newBuys),
+        };
     case "increase_item":
       const increasedBuys = state.buys.map((item) =>
         item.id === action.payload.id
@@ -49,19 +49,19 @@ const cardReducer = (state, action) => {
         buys: increasedBuys,
         ...sum(increasedBuys),
       };
-    case "decrease_item":
-      const decreasedBuys = state.buys
-        .map((item) =>
-          item.id === action.payload.id
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        )
-        .filter((item) => item.quantity > 0);
-      return {
-        ...state,
-        buys: decreasedBuys,
-        ...sum(decreasedBuys),
-      };
+      case "decrease_item":
+        const decreasedBuys = state.buys
+          .map((item) =>
+            item.id === action.payload.id
+              ? { ...item, quantity: item.quantity - 1 }
+              : item
+          )
+          .filter((item) => item.quantity > 0);
+        return {
+          ...state,
+          buys: decreasedBuys,
+          ...sum(decreasedBuys), 
+        };
     case "checkout":
       return {
         buys: [],
