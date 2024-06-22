@@ -1,23 +1,33 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import style from "./SideBar.module.css";
 import { CartContext } from "../../context/context-product/ContextProduct";
+
 const SideBar = ({ sidebar }) => {
-    const {state , dispatch } = useContext(CartContext)
-  console.log(sidebar);
+  const { state, dispatch } = useContext(CartContext);
+  const [currentSidebar, setCurrentSidebar] = useState(sidebar);
+
+  useEffect(() => {
+    setCurrentSidebar({
+      itemCounter: state.buys.length,
+      totalPrice: state.buys.reduce((acc, item) => acc + item.price * item.quantity, 0),
+    });
+  }, [state.buys]);
+
   const formatNumber = (num) => {
     if (!num) return "";
     return parseInt(num, 10).toLocaleString();
   };
+
   return (
     <div className={style.container}>
       <div className={style.first}>
         <div className={style.right}>
           <p className={style.p}>قیمت کالاها</p>
-          <p className={style.p}>({sidebar.itemCounter})</p>
+          <p className={style.p}>({currentSidebar.itemCounter})</p>
         </div>
         <div className={style.left}>
           <p className={style.price}>
-            {formatNumber(sidebar.totalPrice)},000{" "}
+            {formatNumber(currentSidebar.totalPrice)}{" "}
             <span className={style.price_span}>تومان</span>
           </p>
         </div>
@@ -28,7 +38,7 @@ const SideBar = ({ sidebar }) => {
         </div>
         <div className={style.left}>
           <p className={style.off}>
-            {formatNumber(sidebar.totalPrice * 0.2)},000{" "}
+            {formatNumber(currentSidebar.totalPrice * 0.2)}{" "}
             <span className={style.price_span}>تومان</span>
           </p>
         </div>
@@ -39,13 +49,15 @@ const SideBar = ({ sidebar }) => {
         </div>
         <div className={style.left}>
           <p className={style.price}>
-            {formatNumber(sidebar.totalPrice - sidebar.totalPrice * 0.2)},000{" "}
+            {formatNumber(currentSidebar.totalPrice - currentSidebar.totalPrice * 0.2)}{" "}
             <span className={style.price_span}>تومان</span>
           </p>
         </div>
       </div>
       <div className={style.btn_div}>
-        <button onClick={() => dispatch({type:'checkout'})} className={style.btn}>تایید و تکمیل سفارش</button>
+        <button onClick={() => dispatch({ type: 'checkout' })} className={style.btn}>
+          تایید و تکمیل سفارش
+        </button>
       </div>
     </div>
   );

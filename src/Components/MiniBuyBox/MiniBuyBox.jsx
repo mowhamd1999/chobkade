@@ -18,10 +18,13 @@ const MiniBuyBox = ({ product }) => {
     setModule(true)
     setTimeout(() => {
       setModule(false)
-    }, 40000);
+    }, 2000);
   }
 
-
+  const formatNumber = (num) => {
+    if (!num) return "";
+    return parseInt(num, 10).toLocaleString();
+  };
   useEffect(() => {
     console.log(state);
   }, [state]);
@@ -42,7 +45,7 @@ const MiniBuyBox = ({ product }) => {
       <div className={style.sell_container_center}>
         <CiCircleInfo className={style.icon} />
         <div className={style.sell_container_center}>
-          <h3 className={style.h3}>{product.price}</h3>
+          <h3 className={style.h3}>{formatNumber(product.price)}</h3>
           <p className={style.toman}>تومان</p>
         </div>
       </div>

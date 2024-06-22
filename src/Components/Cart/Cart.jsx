@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import style from "./Cart.module.css";
 import { CartContext } from "../../context/context-product/ContextProduct";
-
+import { Link } from "react-router-dom";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { VscSymbolColor } from "react-icons/vsc";
 import { SiHomeassistantcommunitystore } from "react-icons/si";
@@ -25,7 +25,9 @@ const Cart = (props) => {
     <div className={style.container}>
       <div className={style.right}>
         <div className={style.img_div}>
-          <img className={style.img} src={picture} alt="" />
+          <Link to={`/products/${props.product.id}`}>
+            <img className={style.img} src={picture} alt="" />
+          </Link>
         </div>
         <div className={style.div_btn}>
           <div className={style.btn}>
@@ -78,7 +80,7 @@ const Cart = (props) => {
         </div>
         <div className={style.price_div}>
           <p className={style.price}>
-            {formatNumber(price * quantity)},000{" "}
+            {formatNumber(price * quantity)}{" "}
             <span className={style.price_span}>تومان</span>
           </p>
         </div>
