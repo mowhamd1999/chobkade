@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    justify-content: right;
+    margin: 20px 100px;
+    border-bottom: 1px solid black;
+}
+.h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.body{
+    display: flex;
+    margin: 20px 100px;
+    direction: rtl;
+}
+.content{
+    width: 70%;
+    margin: 0px 15px;
+}
+.sidebar{
+    width: 30%;
+}

@@ -10,6 +10,7 @@ import Products from "./Pages/Products/Products";
 import ContextProducts from "./context/context-products/ContextProducts";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Product from "./Pages/Product/Product";
+import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart";
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/products/:id" element={<Product />} />
+          <Route path="/checkout/cart" element={<ShoppingCart />} />
         </Routes>
       </ContextProducts>
       <Footer />

@@ -44,7 +44,9 @@ const Search = () => {
         onRequestClose={closeModal}
         contentLabel="Search Modal"
       >
-        <button className={style.close_btn} onClick={closeModal}><IoCloseCircleSharp className={style.icon_close} /></button>
+        <button className={style.close_btn} onClick={closeModal}>
+          <IoCloseCircleSharp className={style.icon_close} />
+        </button>
         <h2 className={style.h2}>نام محصول مورد نظر را وارد کنید</h2>
         <input
           type="text"
@@ -54,17 +56,15 @@ const Search = () => {
           className={style.input}
         />
         <div className={style.div_ul}>
-
-        <ul className={style.ul}>
-          {filteredProducts.map((product) => (
-            <Link className='join' to={`/products/${product.id}`}>
-
-            <li className={style.li} key={product.id} onClick={closeModal}>
-              {product.name}
-            </li>
-            </Link>
-          ))}
-        </ul>
+          <ul className={style.ul}>
+            {filteredProducts.map((product) => (
+              <Link className="join" to={`/products/${product.id}`}>
+                <li className={style.li} key={product.id} onClick={closeModal}>
+                  {product.name}
+                </li>
+              </Link>
+            ))}
+          </ul>
         </div>
       </Modal>
     </div>

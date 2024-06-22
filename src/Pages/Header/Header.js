@@ -18,8 +18,8 @@ const Header = () => {
   const { user } = useContext(ContextUserProvider);
   const [logout, setLogout] = useState(false);
 
-  const {state} = useContext(CartContext)
-  const quantity = state.itemCounter
+  const { state } = useContext(CartContext);
+  const quantity = state.itemCounter;
   useEffect(() => {
     setLogout(authentication);
   }, [authentication]);
@@ -57,7 +57,7 @@ const Header = () => {
             <Link className="join" to={"/products"}>
               <li className="header_li">محصولات</li>
             </Link>
-            <Link className="join" to={'/about-us'}>
+            <Link className="join" to={"/about-us"}>
               <li className="header_li">درباره ما</li>
             </Link>
             <li className="header_li">سرویس‌ها</li>
@@ -66,8 +66,10 @@ const Header = () => {
         <div className="header_icons">
           <Search />
           <div>
-            <span className="header_shop_quantity">{quantity}</span>
-            <CiShoppingCart className="header_shop" />
+            <Link className="join" to={'/checkout/cart'}>
+              <span className="header_shop_quantity">{quantity}</span>
+              <CiShoppingCart className="header_shop" />
+            </Link>
           </div>
           {logout ? (
             <div style={{ display: "flex", alignItems: "center" }}>

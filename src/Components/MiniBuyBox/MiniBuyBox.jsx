@@ -18,9 +18,8 @@ const MiniBuyBox = ({ product }) => {
     setModule(true)
     setTimeout(() => {
       setModule(false)
-    }, 3000);
+    }, 40000);
   }
-  console.log(module)
 
 
   useEffect(() => {

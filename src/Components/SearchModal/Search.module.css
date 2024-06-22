@@ -7,9 +7,7 @@
   display: flex;
   align-items: center;
 }
-.ReactModal__Overlay:after-open {
-  background-color: rgba(54, 54, 54, 0.75);
-}
+
 .model {
   position: absolute;
   top: 50%;
@@ -67,20 +65,11 @@
   padding: 0px;
   background-color: inherit;
   align-items: center;
-  color: black;
-}
-button {
   margin-top: 10px;
-  padding: 10px 20px;
   border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
   cursor: pointer;
 }
-/* button:hover {
-  background-color: #0056b3;
-} */
+
 .close_btn {
   padding: 0px;
   display: flex;
@@ -109,8 +98,10 @@ button {
 }
 .div_ul{
   height: 230px;
+  border-radius: 10px;
 }
 .ul{
   height: 100%;
   overflow: overlay;
+  border-radius: 10px;
 }
