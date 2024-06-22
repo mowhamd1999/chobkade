@@ -29,7 +29,7 @@
     justify-content: center;
     margin: 40px 0px 10px 0px;
     border: 1px solid gray;
-    width: 100px;
+    width: 120px;
     height: 40px;
     align-items: center;
     border-radius: 7px;
@@ -40,6 +40,8 @@
     font-size: 1.3rem;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 .btn_btn:focus{
     border: none;
@@ -47,13 +49,33 @@
 .left{
     direction: rtl;
     text-align: right;
-    border: 1px solid gray;
     padding: 15px 5px;
 }
 .h4{
     font-size: 1rem;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 .garenty{
-    margin: 20px 5px;
+    margin:  10px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+}
+.garenty p{
+    font-size: 0.8rem;
+}
+.icons{
+    padding: 0px 10px;
+    font-size: 1.3rem;
+}
+.price_div{
+    display: flex;
+    margin: 30px 10px 0px 0px;
+    align-items: center;
+}
+.price{
+    font-size: 1.4rem;
+}
+.price_span{
+    font-size: 0.8rem;
 }

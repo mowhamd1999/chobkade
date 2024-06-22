@@ -18,7 +18,6 @@ const sum = (items) => {
   return { itemCounter, totalPrice: parseFloat(totalPrice) };
 };
 const cardReducer = (state, action) => {
-  console.log(state);
   switch (action.type) {
     case "Add_item":
       if (!state.buys.find((item) => item.id === action.payload.id)) {
@@ -33,7 +32,7 @@ const cardReducer = (state, action) => {
         ...sum(state.buys),
       };
     case "remove_item":
-      const newBuys = state.buys.filter((item) => item.id == action.payload.id);
+      const newBuys = state.buys.filter((item) => item.id !== action.payload.id);
       return {
         ...state,
         buys: [...newBuys],

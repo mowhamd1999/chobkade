@@ -7,7 +7,6 @@ import emailjs from "@emailjs/browser";
 const ContactUs = () => {
   const form = useRef();
 
-  console.log(form);
 
   const handleSubmit = (event) => {
     event.preventDefault();
