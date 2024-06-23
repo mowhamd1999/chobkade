@@ -21,3 +21,19 @@
 .sidebar{
     width: 30%;
 }
+@media(max-width : 850px){
+    .body{
+        display: block;
+    }
+    .content{
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+    }
+}
+@media(max-width : 650px){
+    .content{
+        margin: 0px;
+    }
+}

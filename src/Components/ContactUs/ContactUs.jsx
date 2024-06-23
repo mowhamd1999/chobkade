@@ -7,7 +7,6 @@ import emailjs from "@emailjs/browser";
 const ContactUs = () => {
   const form = useRef();
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
     emailjs
@@ -36,47 +35,53 @@ const ContactUs = () => {
             </h2>
             <div className={style.contact_form_body}>
               <form ref={form} onSubmit={handleSubmit} className={style.form}>
-                <div className={style.contact_form_input}>
-                  <label className={style.form_label}>
-                    نام و نام خانوادگی *
-                  </label>
+                <div className={style.ContactUs_form}>
+                  <div className={style.contact_form_input}>
+                    <label className={style.form_label}>
+                      نام و نام خانوادگی *
+                    </label>
+                    <input
+                      className={style.form_input}
+                      type="text"
+                      placeholder="نام و نام خانوادگی"
+                      required
+                      name="from_name"
+                    />
+                  </div>
+                  <div className={style.contact_form_input}>
+                    <label className={style.form_label}>آدرس الکترونیک</label>
+                    <input
+                      className={style.form_input}
+                      type="email"
+                      placeholder="ایمیل"
+                      name="user_email"
+                    />
+                  </div>
+                  <div className={style.contact_form_input}>
+                    <label className={style.form_label}>شماره تماس *</label>
+                    <input
+                      className={style.form_input}
+                      type="number"
+                      name="user_number"
+                      placeholder="۰۹۱۲۱۲۳۴۵۶۷"
+                    />
+                  </div>
+                  <div className={style.contact_form_textarea}>
+                    <label className={style.form_label}>پیام شما *</label>
+                    <textarea
+                      className={style.form_textarea}
+                      type=""
+                      placeholder="پیام را در این فیلد بنویسید"
+                      required
+                      name="message"
+                    />
+                  </div>
                   <input
-                    className={style.form_input}
-                    type="text"
-                    placeholder="نام و نام خانوادگی"
-                    required
-                    name="from_name"
+                    className={style.form_btn}
+                    type="submit"
+                    value="ارسال"
                   />
                 </div>
-                <div className={style.contact_form_input}>
-                  <label className={style.form_label}>آدرس الکترونیک</label>
-                  <input
-                    className={style.form_input}
-                    type="email"
-                    placeholder="ایمیل"
-                    name="user_email"
-                  />
-                </div>
-                <div className={style.contact_form_input}>
-                  <label className={style.form_label}>شماره تماس *</label>
-                  <input
-                    className={style.form_input}
-                    type="number"
-                    name="user_number"
-                    placeholder="۰۹۱۲۱۲۳۴۵۶۷"
-                  />
-                </div>
-                <div className={style.contact_form_textarea}>
-                  <label className={style.form_label}>پیام شما *</label>
-                  <textarea
-                    className={style.form_textarea}
-                    type=""
-                    placeholder="پیام را در این فیلد بنویسید"
-                    required
-                    name="message"
-                  />
-                </div>
-                <input className={style.form_btn} type="submit" value="ارسال" />
               </form>
             </div>
           </div>

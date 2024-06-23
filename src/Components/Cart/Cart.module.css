@@ -79,3 +79,25 @@
 .price_span{
     font-size: 0.8rem;
 }
+@media(max-width : 640px){
+    .img{
+        width: 70px;
+        height: 70px;
+    }
+    .h4{
+        font-size: 0.8rem;
+    }
+    .price{
+        font-size: 0.8rem;
+    }
+    .container{
+        display: block;
+    }
+    .right{
+        width: 100%;
+    }
+    .left{
+        text-align: center;
+        
+    }
+}

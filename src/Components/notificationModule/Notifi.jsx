@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Notifi.module.css";
+import { Link } from "react-router-dom";
 import { IoCloseCircleOutline } from "react-icons/io5";
 const Notifi = ({ onhide, product }) => {
   console.log(product);
@@ -18,7 +19,9 @@ const Notifi = ({ onhide, product }) => {
             <span className={style.body_p}>{product.descriptions}</span>
           </p>
         </div>
-        <button className={style.btn}>برو به سبد خرید</button>
+        <Link to={'/checkout/cart'} className='join'>
+          <button className={style.btn}>برو به سبد خرید</button>
+        </Link>
       </div>
     </div>
   );

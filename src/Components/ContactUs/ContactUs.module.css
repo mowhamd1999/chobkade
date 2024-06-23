@@ -50,6 +50,7 @@
   border-bottom: 1px solid var(--mango);
   margin: 10px 0px 50px;
 }
+
 .form_label {
   color: gray;
   font-size: 1rem;
@@ -146,4 +147,27 @@
   display: contents;
   background-color: aliceblue;
   margin-right: 10px;
+}
+.ContactUs_form{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+}
+@media (max-width : 1000px) {
+  .ContactUs_form{
+    display: block;
+  }
+  .contact_form_input{
+    width: 100%;
+  }
+}
+@media(max-width : 850px) {
+  .contact_body{
+    display: block;
+  }
+  .contact_info{
+    width: auto;
+  }
 }

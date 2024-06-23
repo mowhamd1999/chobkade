@@ -18,6 +18,7 @@
 .right{
     display: flex;
     align-items: center;
+    background-color: #1D271E;
 }
 .price{
     font-size: 1rem;
@@ -53,4 +54,9 @@
     background-color: red;
     color: black;
     border: 1px solid red;
+}
+@media(max-width : 1035px){
+    .first{
+        display: block;
+    }
 }
