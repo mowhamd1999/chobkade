@@ -13,16 +13,13 @@
 .header_ui {
   display: flex;
   list-style: none;
-  height: auto;
+  height: 20px;
 }
 .header_li {
   margin: 0px 20px;
-  padding: 0px 5px;
+  padding: 0px 0px 5px 0px;
   cursor: pointer;
-  border-bottom: 1px solid inherit;
-  
 }
-
 .header_li:hover {
   border-bottom: 1px solid black;
 }
@@ -67,8 +64,8 @@
     display: flex;
     justify-content: center;
   }
-  .header_ui{
-    font-size: 0.6rem;
+  .header_ui,.header_li{
+    font-size: 0.7rem;
   }
 }
 @media (max-width : 640px) {
