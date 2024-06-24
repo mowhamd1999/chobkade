@@ -34,7 +34,7 @@
     top: 0;
     right: 0;
     width: 25%;
-    margin: 10px 40px 0px 0px;
+    margin: 10px 50px 0px 0px;
     padding: 20px 6px;
     background-color: #1D271E;
     border-radius: 20px;
@@ -42,6 +42,22 @@
 }
 @media (max-width : 1180px){
     .container{
+        display: block;
+    }
+    .right{
         display: none;
+    }
+    .left{
+        width: 100%;
+    }
+    .image3{
+        width: 25%;
+        height: 40%;
+    }
+}
+@media (max-width : 900px){
+    .image3{
+        margin: 0px 10px 0px 0px;
+        padding: 10px 10px;
     }
 }
