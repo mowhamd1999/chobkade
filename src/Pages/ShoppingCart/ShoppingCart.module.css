@@ -21,6 +21,15 @@
 .sidebar{
     width: 30%;
 }
+.empty_div{
+    margin: 0px auto;
+    text-align: center;
+    margin: 90px 0px;
+}
+.link{
+    margin-top: 30px;
+    color: #1D271E;
+}
 @media(max-width : 850px){
     .body{
         display: block;
