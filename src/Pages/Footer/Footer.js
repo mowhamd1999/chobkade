@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
-// import { FaInstagram } from "react-icons/fa";
-// import { FaXTwitter } from "react-icons/fa6";
-// import { IoLogoFacebook } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoLogoFacebook } from "react-icons/io";
 const Footer = () => {
   return (
     <div className="footer_container">
@@ -38,9 +38,9 @@ const Footer = () => {
               <h5 className="footer_link">
                 ما را در شبکه های اجتماعی دنبال کنید
               </h5>
-              {/* <FaInstagram className="sc_link" /> */}
-              {/* <FaXTwitter className="sc_link" />
-              <IoLogoFacebook className="sc_link" /> */}
+              <FaInstagram className="sc_link" />
+              <FaXTwitter className="sc_link" />
+              <IoLogoFacebook className="sc_link" />
             </div>
           </div>
         </div>
