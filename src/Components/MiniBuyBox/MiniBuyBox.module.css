@@ -68,7 +68,6 @@
 }
 .box{
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: #1D271E;
     direction: rtl;
@@ -88,4 +87,11 @@
     border-radius: none;
     background-color: inherit;
     color: #D6CC99;
+    font-size: 0.8rem;
+}
+.delete_btn{
+    background-color: #1D271E;
+    display: flex;
+    align-items: center;
+    padding: 0px;
 }
