@@ -1,28 +1,24 @@
-import React , {useEffect} from 'react'
-import { Link } from 'react-router-dom';
-import './MarqueeList.css'
+import React, { useEffect } from "react";
+import "./MarqueeList.css";
+import { Link } from "react-router-dom";
 const MarqueeList = () => {
-    useEffect(() => {
-        const list = document.querySelector('.marquee-list');
-        const clone = list.innerHTML;
-        list.innerHTML += clone;
-      }, []);
+  useEffect(() => {
+    const list = document.querySelector(".marquee-list");
+    const clone = list.innerHTML;
+    list.innerHTML += clone;
+  }, []);
   return (
-      <div className="marquee-container">
+    <div className="marquee-container">
       <div className="marquee-list">
-        <div className="marquee-item">
-          <Link to='/products'>
-            <p>مشاهده محصولات بیشتر</p>
-          </Link>
-        </div>
-        <div className="marquee-item">
-          <Link to='/about-us'>
-            <p>درباره چوبکده</p>
-          </Link>
-        </div>
+        <Link to="/products" className="marquee_link">
+          <div className="marquee-item">مشاهده محصولات بیشتر</div>
+        </Link>
+        <Link to='/about-us' className="marquee_link" >
+          <div className="marquee-item">درباره چوبکده</div>
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MarqueeList
+export default MarqueeList;

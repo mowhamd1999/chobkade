@@ -18,6 +18,8 @@
 .image1 {
   background-color: inherit;
   border-radius: 20px;
+  border: none;
+  outline: unset;
 }
 .left {
   width: 70%;
@@ -28,6 +30,8 @@
 .image2 {
   width: 95%;
   height: 97%;
+  border: none;
+  outline: unset;
 }
 .image3 {
   position: absolute;
@@ -39,6 +43,8 @@
   background-color: #1d271e;
   border-radius: 20px;
   height: 230px;
+  border: none;
+  outline: unset;
 }
 @media (max-width: 1330px) {
   .container {
@@ -56,6 +62,7 @@
     margin-right: 5%;
     padding: 2% 1%;
     margin-top: 0px;
+    
   }
 }
 @media (max-width: 550px) {

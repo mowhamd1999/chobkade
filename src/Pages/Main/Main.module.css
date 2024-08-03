@@ -19,7 +19,7 @@
 @media (max-width : 1160px){
   .h1{
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 400;
   }
 }
 @media (max-width : 1000px){
@@ -32,13 +32,15 @@
     font-size: 2rem;
   }
 }
-@media (max-width : 660px){
+@media (max-width : 670px){
   .h1{
     font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 @media (max-width : 505px){
   .h1{
     font-size: 1rem;
+    font-weight: bold;
   }
 }

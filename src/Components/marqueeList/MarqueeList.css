@@ -23,8 +23,13 @@
   background-color: #445D48;
   padding: 20px 50px;
   font-size: 1rem;
+  background-color: inherit;
 }
-
+.marquee_link{
+  background-color: inherit;
+  color: #FDE5D4;
+  cursor: pointer;
+}
 @keyframes marquee {
   0% {
     transform: translateX(100%);

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { IoIosSearch } from "react-icons/io";
 import { CiShoppingCart } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
 import { IoCloseSharp } from "react-icons/io5";
@@ -39,9 +38,9 @@ const Header = () => {
   return (
     <div className="header_container">
       <div className="header">
-        <div>
+        <div className="header_logo_logo">
           <Link className="join" to={"/"}>
-            <h3>چوبکده</h3>
+            <h1 className="header_logo">چوبکده</h1>
           </Link>
         </div>
         <div className="header_menu">
@@ -60,14 +59,15 @@ const Header = () => {
             <Link className="join" to={"/about-us"}>
               <li className="header_li">درباره ما</li>
             </Link>
-            <li className="header_li">سرویس‌ها</li>
           </ul>
         </div>
         <div className="header_icons">
           <Search />
-          <div>
-            <Link className="join" to={'/checkout/cart'}>
+          <div className="header_shop_container">
+            <div className="header_shop_span">
               <span className="header_shop_quantity">{quantity}</span>
+            </div>
+            <Link className="join" to={"/checkout/cart"}>
               <CiShoppingCart className="header_shop" />
             </Link>
           </div>

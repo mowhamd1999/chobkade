@@ -1,10 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import style from "./Search.module.css";
 import { IoIosSearch } from "react-icons/io";
 import products from "./../../context/context-products/products.json";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+
+Modal.setAppElement("#root"); // برای دسترس‌پذیری
+
 const Search = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -43,23 +46,29 @@ const Search = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Search Modal"
+        overlayClassName={style.ReactModal__Overlay}
+        className={style.ReactModal__Content}
       >
         <button className={style.close_btn} onClick={closeModal}>
           <IoCloseCircleSharp className={style.icon_close} />
         </button>
-        <h2 className={style.h2}>نام محصول مورد نظر را وارد کنید</h2>
+        <h2 className={style.h2}>جستو جو محصول</h2>
         <input
           type="text"
           value={searchTerm}
           onChange={handleSearch}
-          placeholder="جستو جو"
+          placeholder="نام محصول مورد نظر را وارد کنید"
           className={style.input}
         />
         <div className={style.div_ul}>
           <ul className={style.ul}>
             {filteredProducts.map((product) => (
-              <Link className="join" to={`/products/${product.id}`}>
-                <li className={style.li} key={product.id} onClick={closeModal}>
+              <Link
+                className="join"
+                to={`/products/${product.id}`}
+                key={product.id}
+              >
+                <li className={style.li} onClick={closeModal}>
                   {product.name}
                 </li>
               </Link>
