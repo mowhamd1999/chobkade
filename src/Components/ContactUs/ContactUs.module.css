@@ -170,4 +170,13 @@
   .contact_info{
     width: auto;
   }
+  .contact_header{
+    font-size: 1rem;
+  }
+  .contact_forom_header{
+    font-size: 1.3rem;
+  }
+  .contact_info_title{
+    font-size: 1.3rem;
+  }
 }

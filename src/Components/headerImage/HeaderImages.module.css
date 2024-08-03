@@ -1,63 +1,67 @@
-.container{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 0px 50px;
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0px 50px;
 }
-.right{
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 260px;
-    height: 260px;
-    border-radius: 20px;
-    background-color: #1D271E;
-    margin: 10px auto;
+.right {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  height: 260px;
+  border-radius: 20px;
+  background-color: #1d271e;
+  margin: 10px auto;
 }
-.image1{
-    background-color: inherit;
-    border-radius: 20px;
+.image1 {
+  background-color: inherit;
+  border-radius: 20px;
 }
-.left{
-    width: 70%;
-    position: relative;
-    align-items: center;
-    display: flex;
+.left {
+  width: 70%;
+  position: relative;
+  align-items: center;
+  display: flex;
 }
-.image2{
-    width: 95%;
-    height: 97%;
+.image2 {
+  width: 95%;
+  height: 97%;
 }
-.image3{
-    position: absolute;
-    top: 0;
-    right: 0;
+.image3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  margin: 10px 50px 0px 0px;
+  padding: 20px 6px;
+  background-color: #1d271e;
+  border-radius: 20px;
+  height: 230px;
+}
+@media (max-width: 1330px) {
+  .container {
+    display: block;
+  }
+  .right {
+    display: none;
+  }
+  .left {
+    width: 100%;
+  }
+  .image3 {
     width: 25%;
-    margin: 10px 50px 0px 0px;
-    padding: 20px 6px;
-    background-color: #1D271E;
-    border-radius: 20px;
-    height: 230px;
+    height: 43%;
+    margin-right: 5%;
+    padding: 2% 1%;
+    margin-top: 0px;
+  }
 }
-@media (max-width : 1180px){
-    .container{
-        display: block;
-    }
-    .right{
-        display: none;
-    }
-    .left{
-        width: 100%;
-    }
-    .image3{
-        width: 25%;
-        height: 40%;
-    }
-}
-@media (max-width : 900px){
-    .image3{
-        margin: 0px 10px 0px 0px;
-        padding: 10px 10px;
-    }
+@media (max-width: 550px) {
+  .image3 {
+    width: 25%;
+    height: 43%;
+    margin-top: 0px;
+  }
 }
