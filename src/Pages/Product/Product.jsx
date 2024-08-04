@@ -11,8 +11,7 @@ import { IoIosColorPalette } from "react-icons/io";
 import { SlSizeActual } from "react-icons/sl";
 import { GiWeight } from "react-icons/gi";
 
-import MiniBuyBox from './../../Components/MiniBuyBox/MiniBuyBox'
-
+import MiniBuyBox from "./../../Components/MiniBuyBox/MiniBuyBox";
 
 const Product = () => {
   const { products } = useContext(ContextProductsProvider);
@@ -24,15 +23,14 @@ const Product = () => {
     return parseInt(num, 10).toLocaleString();
   };
 
-
   return (
     <div className={style.product}>
+      <div className={style.sell_container}>
+        <MiniBuyBox product={product} />
+      </div>
       <div className={style.header}>
         <p className={style.p_head}>با چوبکده بهترین کیفیت را تجربه کنید</p>
         <h2 className={style.h2_head}>مشخصات محصول</h2>
-      </div>
-      <div className={style.sell_container}>
-      <MiniBuyBox product={product} />
       </div>
       <div className={style.container}>
         <div className={style.div_left}>

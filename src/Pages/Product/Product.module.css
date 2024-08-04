@@ -19,7 +19,7 @@
 .sell_container{
     position: absolute;
     width: 230px;
-    height: 400px;
+    height: 250px;
     background-color: #1D271E;
     top: 50px;
     left: 20px;
@@ -74,4 +74,14 @@
 }
 .description{
     direction: rtl;
+}
+
+
+@media (max-width: 1240px) {
+    .sell_container {
+        position: fixed;
+        bottom: 0;
+        width: 95%;
+        height: 50px;
+    }
 }

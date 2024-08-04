@@ -36,58 +36,60 @@ const MiniBuyBox = ({ product }) => {
         <div className={style.bg}>
           <img className={style.sell_picture} src={product.picture} alt="" />
         </div>
-        <div>
+        <div className={style.product_info_name}>
           <p className={style.p}>{product.name}</p>
           <p className={style.p}>{product.descriptions}</p>
         </div>
       </div>
-      <div className={style.sell_container_center}>
-        <CiCircleInfo className={style.icon} />
+      <div className={style.left}>
         <div className={style.sell_container_center}>
-          <h3 className={style.h3}>{formatNumber(product.price)}</h3>
-          <p className={style.toman}>تومان</p>
-        </div>
-      </div>
-      {state.buys.find((item) => item.id === product.id) ? (
-        <div className={style.box}>
-          <div className={style.quantity_box}>
-            {quantity.quantity > 1 &&
-              <button
-                className={style.increase_btn}
-                onClick={() =>
-                  dispatch({ type: "decrease_item", payload: quantity })
-                }
-              >
-                -
-              </button>
-            }
-            {quantity.quantity === 1 && 
-              <button
-                className={style.increase_btn}
-                onClick={() =>
-                  dispatch({ type: "decrease_item", payload: quantity })
-                }
-              >
-                <CiTrash className={style.delete_btn}/>
-              </button>
-            }
-            <p className={style.increase_btn}>{quantity.quantity}</p>
-            <button
-              className={style.increase_btn}
-              onClick={() =>
-                dispatch({ type: "increase_item", payload: quantity })
-              }
-            >
-              +
-            </button>
+          <CiCircleInfo className={style.icon} />
+          <div className={style.sell_container_center}>
+            <h3 className={style.h3}>{formatNumber(product.price)}</h3>
+            <p className={style.toman}>تومان</p>
           </div>
-          <p className={style.increase_title}>تعداد در سبد خرید</p>
         </div>
-      ) : (
-        <button onClick={add} className={style.add_btn}>
-          افزودن به سبد خرید
-        </button>
-      )}
+        {state.buys.find((item) => item.id === product.id) ? (
+          <div className={style.box}>
+            <div className={style.quantity_box}>
+              {quantity.quantity > 1 && (
+                <button
+                  className={style.increase_btn}
+                  onClick={() =>
+                    dispatch({ type: "decrease_item", payload: quantity })
+                  }
+                >
+                  -
+                </button>
+              )}
+              {quantity.quantity === 1 && (
+                <button
+                  className={style.increase_btn}
+                  onClick={() =>
+                    dispatch({ type: "decrease_item", payload: quantity })
+                  }
+                >
+                  <CiTrash className={style.delete_btn} />
+                </button>
+              )}
+              <p className={style.increase_btn}>{quantity.quantity}</p>
+              <button
+                className={style.increase_btn}
+                onClick={() =>
+                  dispatch({ type: "increase_item", payload: quantity })
+                }
+              >
+                +
+              </button>
+            </div>
+            <p className={style.increase_title}>تعداد در سبد خرید</p>
+          </div>
+        ) : (
+          <button onClick={add} className={style.add_btn}>
+            افزودن به سبد خرید
+          </button>
+        )}
+      </div>
       {module === true && <Notifi onhide={onhide} product={product} />}
     </div>
   );
