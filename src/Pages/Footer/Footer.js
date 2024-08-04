@@ -29,10 +29,14 @@ const Footer = () => {
           </p>
           <div className="footer_info_info">
             <div className="footer_numbers">
-              <h5 className="footer_link">شماره‌تماس</h5>
-              <p className="footer_body">09382979392</p>
-              <p className="footer_body">09919751658</p>
-              <p className="footer_body">021-1234567</p>
+              <div>
+                <h5 className="footer_link">شماره‌تماس</h5>
+              </div>
+              <div className="numbers">
+                <p className="footer_body">09382979392</p>
+                <p className="footer_body">09919751658</p>
+                <p className="footer_body">021-1234567</p>
+              </div>
             </div>
             <div className="footer_socialmedia">
               <h5 className="footer_link">

@@ -1,67 +1,69 @@
-.container{
-    width: 45%;
-    margin: 50px auto;
-    direction: rtl;
+.container {
+  width: 45%;
+  margin: 50px auto;
+  direction: rtl;
 }
-.header{
-    padding: 20px 0px;
+.header {
+  padding: 20px 0px;
+  display: block;
+  border-radius: 25px;
+}
+.form {
+  text-align: center;
+  display: block;
+  border: 1px solid #445d48;
+  border-radius: 20px;
+  align-items: center;
+}
+.div {
+  padding: 30px 20px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .div {
     display: block;
-    border-radius: 25px;
-}
-.form{
-    text-align: center;
+    padding: 10px 10px;
+  }
+  .label {
+    font-size: 0.8rem;
+  }
+  .input {
+    margin: 10px 0px;
+  }
+  .btn {
+    font-size: 0.7rem;
     display: block;
-    border: 1px solid #445D48;
-    border-radius: 20px;
-    align-items: center;
+    border-radius: 0px;
+  }
 }
-.div{
-    padding: 30px 20px;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.label {
+  padding: 0px 20px;
 }
-@media (max-width : 640px){
-    .div{
-        display: block;
-        padding: 10px 10px;
-    }
-    .label{
-        font-size: 0.8rem;
-    }
-    .input{
-        margin: 10px 0px;
-    }
-    .btn{
-        font-size: 0.7rem;
-        display: block;
-        border-radius: 0px;
-    }
+.input {
+  border: 1px solid #445d48;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
 }
-.label{
-    padding: 0px 20px;
+.input:focus {
+  outline: none;
 }
-.input{
-    border: 1px solid #445D48;
-    border-radius: 10px;
-    padding: 10px;
-    width: 50%;
+.btn {
+  display: block;
+  width: 40%;
+  color: white;
+  background-color: #445d48;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 15px;
 }
-.input:focus{   
-    outline: none;
-}
-.btn{
-    display: block;
-    width: 40%;
-    border: 1px solid #445D48;
-    text-align: center;
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 10px 15px;
-}
-.btn:hover{
-    color: white;
-    background-color: #445D48;
-    cursor: pointer;
+.btn:hover {
+  color: white;
+  background-color: #1d271e;
+  cursor: pointer;
 }

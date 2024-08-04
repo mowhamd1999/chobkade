@@ -17,6 +17,8 @@ const Products = () => {
   const [minPrice, setMinPrice] = useState(50000);
   const [maxPrice, setMaxPrice] = useState(1000000);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     const uniqueCategories = categoryFilter(products, "category");
     setCategory(uniqueCategories);
@@ -76,10 +78,14 @@ const Products = () => {
     }, []);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className={style.container}>
       <h1 className={style.header}>محصولات چوبکده</h1>
-      <div className={style.section}>
+      <div className={`${style.section} ${isMenuOpen ? style.menuOpen : ""}`}>
         <div className={`${style.products} ${style.box}`}>
           {filter.map((product) => (
             <CardProducts
@@ -90,7 +96,13 @@ const Products = () => {
           ))}
         </div>
         <div className={`${style.aside} ${style.box}`}>
-          <h3 className={style.filter_header}>فیلترها</h3>
+          <div className={style.filter_hamburger}>
+            <h3 className={style.filter_header}>فیلترها</h3>
+            <button className={style.hamburger} onClick={toggleMenu}>
+              ☰
+            </button>
+          </div>
+
           <div className={style.filter_header}>
             <h5 className={style.title}>محصول</h5>
             <div className={style.category_filter}>

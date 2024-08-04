@@ -3,16 +3,17 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  width: 1000px; 
+  width: 1000px;
   max-width: 1000px;
   margin: auto;
   overflow: hidden;
+  margin-top: 50px;
 }
 
 .slider {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 60%;
+  height: 400px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -21,11 +22,12 @@
 .slider-item {
   position: absolute;
   top: 50%;
-  background: #C3BA8B;
+  background: #c3ba8b;
   height: auto;
   transform: translateY(-50%);
   transition: all 0.5s ease-in-out;
   border-radius: 10px;
+  height: 300px;
 }
 
 .slider-image {
@@ -42,7 +44,7 @@
   padding: 20px;
   direction: rtl;
   text-align: right;
-  background-color: #C3BA8B;
+  background-color: #c3ba8b;
   border-radius: 10px;
 }
 
@@ -78,12 +80,11 @@
 }
 
 .slider-button {
-
   color: black;
   border: none;
   cursor: pointer;
-  z-index: 2;
   font-size: 2rem;
   align-items: center;
   display: flex;
+  z-index: 1;
 }

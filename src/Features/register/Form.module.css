@@ -22,23 +22,6 @@
     justify-content: space-between;
     align-items: center;
 }
-@media (max-width : 640px){
-    .div{
-        display: block;
-        padding: 10px 10px;
-    }
-    .label{
-        font-size: 0.8rem;
-    }
-    .input{
-        margin: 10px 0px;
-    }
-    .btn{
-        font-size: 0.7rem;
-        display: block;
-        border-radius: 0px;
-    }
-}
 .label{
     padding: 0px 20px;
 }
@@ -54,7 +37,9 @@
 .btn{
     display: block;
     width: 40%;
-    border: 1px solid #445D48;
+    background-color: #445D48;
+    color: antiquewhite;
+    border: none;
     text-align: center;
     margin: 20px auto;
     border-radius: 20px;
@@ -62,6 +47,23 @@
 }
 .btn:hover{
     color: white;
-    background-color: #445D48;
+    background-color: #1d271e;
     cursor: pointer;
+    border: none;
+}
+@media (max-width : 975px){
+    .div{
+        display: inline-grid;
+        text-align: center;
+        margin: 0px auto;
+    }
+    .input{
+        margin: 10px 0px;
+        width: 88%;
+    }
+    .btn{
+        font-size: 0.7rem;
+        display: block;
+        border-radius: 0px;
+    }
 }

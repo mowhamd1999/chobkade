@@ -74,7 +74,7 @@ export default function App() {
         })}
       </div>
       <button className="slider-button" onClick={nextImage}>
-        <GrNext />
+        <GrNext className="slider_btn"/>
       </button>
     </div>
   );
