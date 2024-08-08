@@ -29,7 +29,7 @@
 }
 
 .aside {
-  width: 30%;
+  width: 20%;
   height: 88vh;
   background-color: aliceblue;
   margin: 20px 20px;
@@ -156,13 +156,13 @@
   background-color: aliceblue;
   justify-content: space-between;
   width: 100%;
-  margin-top: -20px;
+  
   align-items: center;
 }
 @media (max-width: 895px) {
   .hamburger {
     display: block;
-    margin-top: -3px;
+    margin-top: -5px;
   }
 
   .section {
@@ -189,5 +189,8 @@
 
   .product_product {
     margin: 0;
+  }
+  .filter_hamburger{
+    margin-top: -18px;
   }
 }
