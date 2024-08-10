@@ -25,9 +25,6 @@ const Product = () => {
 
   return (
     <div className={style.product}>
-      <div className={style.sell_container}>
-        <MiniBuyBox product={product} />
-      </div>
       <div className={style.header}>
         <p className={style.p_head}>با چوبکده بهترین کیفیت را تجربه کنید</p>
         <h2 className={style.h2_head}>مشخصات محصول</h2>
@@ -148,6 +145,9 @@ const Product = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={style.sell_container}>
+        <MiniBuyBox product={product} />
       </div>
     </div>
   );

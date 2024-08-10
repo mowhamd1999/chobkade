@@ -30,7 +30,7 @@
 
 .aside {
   width: 20%;
-  height: 88vh;
+  height: 70vh;
   background-color: aliceblue;
   margin: 20px 20px;
   direction: rtl;
@@ -93,6 +93,7 @@
   justify-content: space-between;
   padding: 0px 20px;
   background-color: aliceblue;
+  margin-top: 20px;
 }
 
 .price_content {

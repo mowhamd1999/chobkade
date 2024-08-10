@@ -95,22 +95,30 @@
   align-items: center;
   padding: 0px;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1320px) {
   .bg {
     display: flex;
     justify-content: space-between;
     width: 100%;
     direction: rtl;
-    height: 50px;
+    height: 30px;
+    margin: 0px;
+    align-items: center;
   }
   .product_info_name {
+    width: 100%;
+  }
+  .sell_container_top{
+    padding: 0px;
+    margin: 0px;
+    border: none;
   }
   .add_btn {
     padding: 4px 10px;
     display: flex;
     align-items: center;
     text-align: center;
-    width: 50%;
+    width: 200px;
   }
   .left {
     width: 50%;
@@ -118,5 +126,27 @@
     justify-content: left;
     background-color: #1d271e;
   }
-  
+}
+@media (max-width : 720px){
+  .add_btn{
+    font-size: 0.6rem;
+    width: 120px;
+  }
+  .h3{
+    font-size: 1rem;
+  }
+}
+@media (max-width : 655px){
+  .bg{
+    display: flex;
+    /* justify-content: center; */
+  }
+}
+@media(max-width: 550px){
+  .left{
+    width: auto;
+  }
+  .h3{
+    font-size: 1rem;
+  }
 }
