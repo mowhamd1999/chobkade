@@ -63,7 +63,7 @@ const Product = () => {
             </div>
             <div>
               <div className={style.title}>
-                <h3>فیمت </h3>
+                <h3>قیمت </h3>
               </div>
               <div className={style.body}>
                 <p>{formatNumber(product.price)} هزار تومان</p>

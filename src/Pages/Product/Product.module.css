@@ -165,4 +165,17 @@
   .icons,.icon{
     display: none;
   }
+  .title{
+    font-weight: 400;
+    font-size: 0.6rem;
+  }
+  .section{
+    padding: 5px;
+  }
+  .section_right{
+    padding: 5px;
+  }
+  .body{
+    font-size: 0.6rem;
+  }
 }

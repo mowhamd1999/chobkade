@@ -106,7 +106,7 @@
     align-items: center;
   }
   .product_info_name {
-    width: 100%;
+    border: none;
   }
   .sell_container_top{
     padding: 0px;
@@ -155,4 +155,11 @@
   .icon{
     display: none;
   }
+.product_info_name{
+  font-size: 0.6rem;
+  text-align: right;
+}
+.p{
+  font-size: 0.5rem;
+}
 }
