@@ -179,4 +179,10 @@
   .contact_info_title{
     font-size: 1.3rem;
   }
+  .contactus_all{
+    width: 100%;
+  }
+  .contact_form{
+    padding: 20px;
+  }
 }

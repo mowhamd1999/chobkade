@@ -101,7 +101,7 @@
     justify-content: space-between;
     width: 100%;
     direction: rtl;
-    height: 30px;
+    height: 35px;
     margin: 0px;
     align-items: center;
   }
@@ -147,6 +147,12 @@
     width: auto;
   }
   .h3{
-    font-size: 1rem;
+    font-size: 0.7rem;
+  }
+  .add_btn{
+    width: 105px;
+  }
+  .icon{
+    display: none;
   }
 }
