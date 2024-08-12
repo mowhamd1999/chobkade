@@ -52,7 +52,7 @@ const Search = () => {
         <button className={style.close_btn} onClick={closeModal}>
           <IoCloseCircleSharp className={style.icon_close} />
         </button>
-        <h2 className={style.h2}>جستو جو محصول</h2>
+        <h2 className={style.h2}>جستوجو </h2>
         <input
           type="text"
           value={searchTerm}

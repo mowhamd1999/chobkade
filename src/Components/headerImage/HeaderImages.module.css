@@ -46,7 +46,7 @@
   border: none;
   outline: unset;
 }
-@media (max-width: 1875px) {
+@media (max-width: 2048px) {
   .image3 {
     position: absolute;
     top: 5px;

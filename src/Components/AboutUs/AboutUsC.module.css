@@ -5,19 +5,15 @@
   font-family: "Arial", sans-serif;
   margin: 50px 30px;
 }
-
 .left {
-
   width: 100%;
-
   background-color: inherit;
 }
 .right {
   position: relative;
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
-
 .images {
   position: relative;
   width: 100%;
@@ -58,16 +54,13 @@
   align-items: center;
   margin: 50px 0px;
 }
-@media(max-width : 1000px){
-  .person{
+@media (max-width: 1000px) {
+  .person {
     display: none;
   }
 }
-@media(max-width : 640px) {
-  .light{
-    display: none;
-  }
-  .p{
+@media (max-width: 640px) {
+  .p {
     width: 100%;
   }
 }

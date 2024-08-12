@@ -5,7 +5,6 @@ import ContactUs from "../ContactUs/ContactUs";
 import light from "./../../assets/about/light.png";
 import person from "./../../assets/about/person.png";
 const AboutUsC = () => {
-
   return (
     <div className={style.container}>
       <div className={style.right}>
@@ -17,9 +16,6 @@ const AboutUsC = () => {
               هستیم که به تبدیل فضای زندگی شما با مبلمانی شیک و با کیفیت متعهد
               هستیم.
             </p>
-            <div className={style.light}>
-              <img src={light} />
-            </div>
           </div>
           <div className={style.center}>
             <div className={style.person}>
@@ -37,8 +33,8 @@ const AboutUsC = () => {
           </div>
         </div>
       </div>
-      <div className={style.left}>   
-          <ContactUs />
+      <div className={style.left}>
+        <ContactUs />
       </div>
     </div>
   );

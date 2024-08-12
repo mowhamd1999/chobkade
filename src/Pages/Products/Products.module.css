@@ -22,10 +22,10 @@
 }
 
 .products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 80%;
+  justify-content: center;
 }
 
 .aside {
@@ -141,9 +141,9 @@
     right: 0;
   }
   .products {
-    display: flex;
-    justify-content: left;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     width: 70%;
+    justify-content: left;
   }
 
   .price {
@@ -157,7 +157,7 @@
   background-color: aliceblue;
   justify-content: space-between;
   width: 100%;
-  
+
   align-items: center;
 }
 @media (max-width: 895px) {
@@ -184,14 +184,18 @@
   }
 
   .products {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    );
     width: 100%;
-    justify-content: center;
+    justify-items: center;
   }
 
   .product_product {
     margin: 0;
   }
-  .filter_hamburger{
+  .filter_hamburger {
     margin-top: -18px;
   }
 }
