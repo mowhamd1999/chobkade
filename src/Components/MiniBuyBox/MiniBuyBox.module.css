@@ -131,6 +131,12 @@
     justify-content: left;
     background-color: #1d271e;
   }
+  .increase_btn{
+    font-size: 1rem;
+  }
+  .box{
+    margin-top: 0px;
+  }
 }
 @media (max-width: 720px) {
   .bg {
@@ -153,7 +159,9 @@
 @media (max-width: 655px) {
   .bg {
     display: flex;
-    /* justify-content: center; */
+  }
+  .increase_title{
+    display: none;
   }
 }
 @media (max-width: 550px) {
