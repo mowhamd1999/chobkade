@@ -178,4 +178,10 @@
   .body{
     font-size: 0.6rem;
   }
+  .div_right{
+    justify-content: center;
+  }
+  .div_left{
+    justify-content: center;
+  }
 }

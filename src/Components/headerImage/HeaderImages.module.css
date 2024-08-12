@@ -46,6 +46,36 @@
   border: none;
   outline: unset;
 }
+@media (max-width: 1875px) {
+  .image3 {
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    width: 25%;
+    margin: 10px 50px 0px 0px;
+    padding: 20px 6px;
+    background-color: #1d271e;
+    border-radius: 20px;
+    height: 41%;
+    border: none;
+    outline: unset;
+  }
+}
+@media (max-width: 1645px) {
+  .image3 {
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    width: 23%;
+    margin: 10px 50px 0px 0px;
+    padding: 20px 6px;
+    background-color: #1d271e;
+    border-radius: 20px;
+    height: 41%;
+    border: none;
+    outline: unset;
+  }
+}
 @media (max-width: 1330px) {
   .container {
     display: block;
@@ -57,18 +87,23 @@
     width: 100%;
   }
   .image3 {
-    width: 25%;
-    height: 43%;
+    width: 22%;
+    height: 41%;
     margin-right: 5%;
     padding: 2% 1%;
     margin-top: 0px;
-    
   }
 }
 @media (max-width: 550px) {
   .image3 {
-    width: 25%;
-    height: 43%;
-    margin-top: 0px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 22%;
+    background-color: #1d271e;
+    border-radius: 20px;
+    height: 41%;
+    border: none;
+    outline: unset;
   }
 }
