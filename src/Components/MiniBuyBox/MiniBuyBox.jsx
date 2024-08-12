@@ -17,7 +17,7 @@ const MiniBuyBox = ({ product }) => {
     setModule(true);
     setTimeout(() => {
       setModule(false);
-    }, 100000);
+    }, 2000);
   };
 
   const formatNumber = (num) => {

@@ -1,5 +1,9 @@
 *{
   margin: 0px ;
   background-color: #D6CC99;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'MyCustomFont';
+}
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url(./assets/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.ttf);
 }
