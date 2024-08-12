@@ -9,7 +9,7 @@ const Notifi = ({ onhide, product }) => {
       <div className={style.container}>
         <div className={style.header}>
           <p className={style.header_p}>این کالا به سبد خرید شما اضافه شد!</p>
-          <IoCloseCircleOutline className={style.close} onClick={onhide} />
+          {/* <IoCloseCircleOutline className={style.close} onClick={onhide} /> */}
         </div>
         <div className={style.body}>
           <img className={style.pic} src={product.picture} alt={product.name} />

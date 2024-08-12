@@ -1,69 +1,78 @@
-.notifi{
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(50, 49, 35, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: 1s;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
+.notifi {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(50, 49, 35, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.active{
-    opacity: 1;
-    visibility: visible;
+.active {
+  opacity: 1;
+  visibility: visible;
 }
-.container{
-    width: 40%;
-    height: 30%;
-    background-color: antiquewhite;
-    direction: rtl;
-    padding: 20px;
-    border-radius: 20px;
+.container {
+  width: 40%;
+  height: 25%;
+  background-color: antiquewhite;
+  direction: rtl;
+  padding: 20px;
+  border-radius: 20px;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    background-color: inherit;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #abadac;
-    padding: 10px 0px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #abadac;
+  padding: 10px 0px;
 }
-.header_p{
-    background-color: inherit;
-    color: #365b3a;
+.header_p {
+  background-color: inherit;
+  color: #365b3a;
 }
-.close{
-    background-color: inherit;
-    font-size: 1.5rem;
+.close {
+  background-color: inherit;
+  font-size: 1.5rem;
 }
-.pic{
-    width: 100px;
-    height: 70px;
-    background-color: inherit;
+.pic {
+  width: 100px;
+  height: 70px;
+  background-color: inherit;
 }
-.body{
-    background-color: inherit;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.body {
+  background-color: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.body_p{
-    background-color: inherit;
+.body_p {
+  background-color: inherit;
 }
-.btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-    margin: 25px 0px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  margin: 0px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 670px) {
+    .body_p{
+        font-size: 0.7rem;
+    }
+    .pic{
+        width: 60px;
+        height: 50px;
+    }
 }
