@@ -1,69 +1,69 @@
-.container{
-    width: 45%;
-    margin: 50px auto;
-    direction: rtl;
+.container {
+  width: 45%;
+  margin: 50px auto;
+  direction: rtl;
 }
-.header{
-    padding: 20px 0px;
-    display: block;
-    border-radius: 25px;
+.header {
+  padding: 20px 0px;
+  display: block;
+  border-radius: 25px;
 }
-.form{
+.form {
+  text-align: center;
+  display: block;
+  border: 1px solid #445d48;
+  border-radius: 20px;
+  align-items: center;
+}
+.div {
+  padding: 30px 20px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.label {
+  padding: 0px 20px;
+}
+.input {
+  border: 1px solid #445d48;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+}
+.input:focus {
+  outline: none;
+}
+.btn {
+  display: block;
+  width: 40%;
+  background-color: #445d48;
+  color: antiquewhite;
+  border: none;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+.btn:hover {
+  color: white;
+  background-color: #1d271e;
+  cursor: pointer;
+  border: none;
+}
+@media (max-width: 975px) {
+  .div {
+    display: inline-grid;
     text-align: center;
+    margin: 0px auto;
+  }
+  .input {
+    margin: 10px 0px;
+    width: 88%;
+  }
+  .btn {
+    font-size: 0.7rem;
     display: block;
-    border: 1px solid #445D48;
-    border-radius: 20px;
-    align-items: center;
-}
-.div{
-    padding: 30px 20px;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.label{
-    padding: 0px 20px;
-}
-.input{
-    border: 1px solid #445D48;
-    border-radius: 10px;
-    padding: 10px;
-    width: 50%;
-}
-.input:focus{   
-    outline: none;
-}
-.btn{
-    display: block;
-    width: 40%;
-    background-color: #445D48;
-    color: antiquewhite;
-    border: none;
-    text-align: center;
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 10px 15px;
-}
-.btn:hover{
-    color: white;
-    background-color: #1d271e;
-    cursor: pointer;
-    border: none;
-}
-@media (max-width : 975px){
-    .div{
-        display: inline-grid;
-        text-align: center;
-        margin: 0px auto;
-    }
-    .input{
-        margin: 10px 0px;
-        width: 88%;
-    }
-    .btn{
-        font-size: 0.7rem;
-        display: block;
-        border-radius: 0px;
-    }
+    border-radius: 0px;
+  }
 }

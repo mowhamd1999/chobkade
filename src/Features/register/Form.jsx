@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import style from "./Form.module.css";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
+import "react-toastify/dist/ReactToastify.css";
 const Form = () => {
   const [islogin, setIslogin] = useState(false);
   const [userData, setUserData] = useState({
@@ -22,19 +24,50 @@ const Form = () => {
         );
         setUser(userData);
         setIslogin(true);
-        alert(`${userData.name}ثبت نام شما با موفقیت انجام شد  `);
+        toast.success("ثبت نام شما با موفقیت انجام شد", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "inherient",
+          style: { color: "black" },
+        });
         console.log("User created:", response.data);
       } catch (error) {
         console.log(error);
+        toast.error("ثبت نام انجام نشد . لطفا بار دیگر تلاش کنید", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "inherient",
+          style: { color: "black" },
+        });
       }
     } else {
-      alert("اطلاعات به درستی وارد نشده است");
+      toast.warn("اطلاعات به درستی وارد نشده، لطفا مجدد تلاش کنید", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "inherient",
+        style: { color: "black" },
+      });
     }
     setTimeout(() => {
       setUserData({
-        name: '',
-        email: '',
-        password: '',
+        name: "",
+        email: "",
+        password: "",
       });
     }, 1000);
   };
@@ -92,6 +125,18 @@ const Form = () => {
           ثبت نام
         </button>
       </form>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={true}
+        closeOnClick
+        rtl
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        richColors
+      />
     </div>
   );
 };
