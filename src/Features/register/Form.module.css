@@ -16,20 +16,23 @@
   align-items: center;
 }
 .div {
-  padding: 30px 20px;
+  padding: 30px 0px;
   border-radius: 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  height: 50px;
 }
 .label {
   padding: 0px 20px;
+  width: 20%;
 }
 .input {
   border: 1px solid #445d48;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
-  width: 50%;
+  width: 80%;
 }
 .input:focus {
   outline: none;
@@ -50,6 +53,15 @@
   background-color: #1d271e;
   cursor: pointer;
   border: none;
+}
+.input_div {
+  width: 50%;
+  display: grid;
+  text-align: right;
+}
+.span {
+  font-size: 0.8rem;
+  color: red;
 }
 @media (max-width: 975px) {
   .div {

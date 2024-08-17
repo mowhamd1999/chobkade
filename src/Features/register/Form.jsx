@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import * as Yup from "yup";
 const Form = () => {
   const { user, setUser } = useContext(ContextUserProvider);
   const navigate = useNavigate();
@@ -72,6 +73,11 @@ const Form = () => {
         });
       }
     },
+    validationSchema: Yup.object({
+      name: Yup.string().min(8, "باید بیش از ۸ کلمه باشد").required("الزامی"),
+      email: Yup.string().email("ایمیل معتبر نیست!").required("الزامی"),
+      password: Yup.string().min(8, "حداقل ۸ کارکتر باشد").required("الزامی"),
+    }),
   });
 
   return (
@@ -82,40 +88,49 @@ const Form = () => {
           <label htmlFor="name" className={style.label}>
             نام و نام خانوادگی :
           </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className={style.input}
-            onChange={formik.handleChange}
-            value={formik.values.name}
-          />
+          <div className={style.input_div}>
+            <input
+              type="text"
+              id="name"
+              className={style.input}
+              {...formik.getFieldProps("name")}
+            />
+            {formik.touched.name && formik.errors.name ? (
+              <span className={style.span}>{formik.errors.name}</span>
+            ) : null}
+          </div>
         </div>
         <div className={style.div}>
           <label htmlFor="email" className={style.label}>
             ایمیل :
           </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className={style.input}
-            value={formik.values.email}
-            onChange={formik.handleChange}
-          />
+          <div className={style.input_div}>
+            <input
+              type="email"
+              id="email"
+              className={style.input}
+              {...formik.getFieldProps("email")}
+            />
+            {formik.touched.email && formik.errors.email ? (
+              <span className={style.span}>{formik.errors.email}</span>
+            ) : null}
+          </div>
         </div>
         <div className={style.div}>
           <label htmlFor="password" className={style.label}>
             رمز :
           </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            className={style.input}
-            value={formik.values.password}
-            onChange={formik.handleChange}
-          />
+          <div className={style.input_div}>
+            <input
+              type="password"
+              id="password"
+              className={style.input}
+              {...formik.getFieldProps("password")}
+            />
+            {formik.touched.password && formik.errors.password ? (
+              <span className={style.span}>{formik.errors.password}</span>
+            ) : null}
+          </div>
         </div>
         <button type="submit" className={style.btn}>
           ثبت نام
