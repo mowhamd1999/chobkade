@@ -39,9 +39,9 @@
     cursor: pointer;
   }
   .header_shop_quantity {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     background-color: #1d271e;
-    padding: 0px 6px;
+    padding: 1px 6px;
     color: white;
     border-radius: 50%;
     border: none;
