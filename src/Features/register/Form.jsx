@@ -9,7 +9,22 @@ import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 const Form = () => {
   const { user, setUser } = useContext(ContextUserProvider);
+  const [isLogin, setIsLogin] = useState(false);
+  const [actoken, setActoken] = useState("");
+  const [reftoken, setRefctoken] = useState("");
   const navigate = useNavigate();
+  const login = async (values) => {
+    const info = { email: values.email, password: values.password };
+    const response = await axios.post(
+      "https://api.escuelajs.co/api/v1/auth/login",
+      info
+    );
+    console.log(response.data);
+    setActoken(response.data.access_token);
+    setRefctoken(response.data.refresh_token);
+    setIsLogin(true);
+    navigate("/");
+  };
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -25,6 +40,7 @@ const Form = () => {
             "https://api.escuelajs.co/api/v1/users/",
             values
           );
+          await login(values);
           toast.success("ثبت نام شما با موفقیت انجام شد", {
             position: "top-right",
             autoClose: 5000,
@@ -36,10 +52,10 @@ const Form = () => {
             theme: "inherient",
             style: { color: "black" },
           });
+          setUser(response.data);
           console.log("User created:", response.data);
           setTimeout(() => {
             formik.resetForm();
-            navigate("/login");
           }, 1500);
         } catch (error) {
           if (error.response && error.response.status === 400) {
@@ -79,7 +95,12 @@ const Form = () => {
       password: Yup.string().min(8, "حداقل ۸ کارکتر باشد").required("الزامی"),
     }),
   });
-
+  useEffect(() => {
+    if (isLogin) {
+      localStorage.setItem("access_token", actoken);
+      localStorage.setItem("refresh_token", reftoken);
+    }
+  }, [isLogin, actoken, reftoken]);
   return (
     <div className={style.container}>
       <form onSubmit={formik.handleSubmit} className={style.form}>

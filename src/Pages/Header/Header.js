@@ -16,7 +16,6 @@ const Header = () => {
   const { authentication, setAuthentication } = useContext(ContextAuthProvider);
   const { user } = useContext(ContextUserProvider);
   const [logout, setLogout] = useState(false);
-
   const { state } = useContext(CartContext);
   const quantity = state.itemCounter;
   useEffect(() => {
