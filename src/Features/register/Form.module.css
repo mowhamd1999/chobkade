@@ -63,19 +63,20 @@
   font-size: 0.8rem;
   color: red;
 }
-@media (max-width: 975px) {
+@media (max-width: 755px) {
   .div {
-    display: inline-grid;
+    display: block;
+    align-items: center;
     text-align: center;
     margin: 0px auto;
   }
-  .input {
-    margin: 10px 0px;
-    width: 88%;
-  }
-  .btn {
-    font-size: 0.7rem;
+  .input_div {
     display: block;
-    border-radius: 0px;
+    text-align: center;
+    width: 75%;
+    margin: 7px auto;
+  }
+  .input{
+    width: 85%;
   }
 }
