@@ -7,11 +7,12 @@ import { IoCloseSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
+import { ContextAuthProvider } from "../../context/context-auth/ContextAuth";
 import { CartContext } from "../../context/context-product/ContextProduct";
 import Search from "../../Components/SearchModal/Search";
 const Header = () => {
   const [open, setOpen] = useState(false);
-
+  const {authentication , setAuthentication} = useContext(ContextAuthProvider)
   const { user, setUser } = useContext(ContextUserProvider);
   const [logout, setLogout] = useState(false);
   const { state } = useContext(CartContext);
@@ -25,6 +26,7 @@ const Header = () => {
   const logouted = (e) => {
     setLogout(true);
     setUser({});
+    setAuthentication(false)
     setTimeout(() => {
       window.location.reload();
     }, 1000);
@@ -67,7 +69,7 @@ const Header = () => {
               <CiShoppingCart className="header_shop" />
             </Link>
           </div>
-          {Object.entries(user).length > 0 ? (
+          {Object.entries(user).length > 0 || authentication === true ? (
             <div style={{ display: "flex", alignItems: "center" }}>
               <Link className="join">
                 <span style={{ fontSize: "0.8rem" }}>{user.name}</span>

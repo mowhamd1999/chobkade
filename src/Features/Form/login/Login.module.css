@@ -16,21 +16,26 @@
   align-items: center;
 }
 .div {
-  padding: 30px 20px;
+  padding: 30px 0px;
   border-radius: 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
 }
-@media (max-width: 640px) {
+@media(max-width: 780px) {
+  .container{
+    width: 70%;
+  }
   .div {
     display: block;
-    padding: 10px 10px;
+    width: 100%;
   }
   .label {
     font-size: 0.8rem;
   }
-  .input {
+  .input{
+    width: 70%;
     margin: 10px 0px;
   }
   .btn {
@@ -41,12 +46,13 @@
 }
 .label {
   padding: 0px 20px;
+  width: 20%;
 }
 .input {
   border: 1px solid #445d48;
   border-radius: 10px;
   padding: 10px;
-  width: 50%;
+  width: 45%;
 }
 .input:focus {
   outline: none;
