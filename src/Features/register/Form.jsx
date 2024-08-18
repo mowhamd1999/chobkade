@@ -4,6 +4,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
+import { ContextAuthProvider } from "../../context/context-auth/ContextAuth";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
@@ -23,7 +24,6 @@ const Form = () => {
     setActoken(response.data.access_token);
     setRefctoken(response.data.refresh_token);
     setIsLogin(true);
-    navigate("/");
   };
   const formik = useFormik({
     initialValues: {
@@ -56,7 +56,8 @@ const Form = () => {
           console.log("User created:", response.data);
           setTimeout(() => {
             formik.resetForm();
-          }, 1500);
+            navigate("/");
+          }, 3000);
         } catch (error) {
           if (error.response && error.response.status === 400) {
             console.log("خطای 400: درخواست نامعتبر است");

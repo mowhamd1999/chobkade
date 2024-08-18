@@ -6,32 +6,29 @@ import { FiMenu } from "react-icons/fi";
 import { IoCloseSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
-import { ContextAuthProvider } from "../../context/context-auth/ContextAuth";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
 import { CartContext } from "../../context/context-product/ContextProduct";
 import Search from "../../Components/SearchModal/Search";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
-  const { authentication, setAuthentication } = useContext(ContextAuthProvider);
-  const { user } = useContext(ContextUserProvider);
+  const { user, setUser } = useContext(ContextUserProvider);
   const [logout, setLogout] = useState(false);
   const { state } = useContext(CartContext);
   const quantity = state.itemCounter;
   useEffect(() => {
-    setLogout(authentication);
-  }, [authentication]);
+    localStorage.setItem("access_token", "");
+    localStorage.setItem("refresh_token", "");
+  }, [logout]);
 
   const navigate = useNavigate();
   const logouted = (e) => {
-    setLogout(false);
-    setAuthentication(false);
+    setLogout(true);
+    setUser({});
     setTimeout(() => {
       window.location.reload();
     }, 1000);
     navigate("/register");
-    localStorage.setItem("access", "");
-    localStorage.setItem("refresh", "");
   };
 
   return (
@@ -70,9 +67,11 @@ const Header = () => {
               <CiShoppingCart className="header_shop" />
             </Link>
           </div>
-          {logout ? (
+          {Object.entries(user).length > 0 ? (
             <div style={{ display: "flex", alignItems: "center" }}>
-              <span style={{ fontSize: "0.8rem" }}>{user.name}</span>
+              <Link className="join">
+                <span style={{ fontSize: "0.8rem" }}>{user.name}</span>
+              </Link>
               <button className="logout" onClick={logouted}>
                 خروج
               </button>

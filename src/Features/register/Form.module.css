@@ -63,8 +63,8 @@
   font-size: 0.8rem;
   color: red;
 }
-@media(max-width:1260px){
-  .container{
+@media (max-width: 1260px) {
+  .container {
     width: 65%;
   }
 }
@@ -81,7 +81,7 @@
     width: 75%;
     margin: 7px auto;
   }
-  .input{
+  .input {
     width: 90%;
   }
 }
