@@ -4,12 +4,11 @@ import axios from "axios";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
-import { ContextAuthProvider } from "../../context/context-auth/ContextAuth";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 const Form = () => {
-  const { user, setUser } = useContext(ContextUserProvider);
+  const { setUser } = useContext(ContextUserProvider);
   const [isLogin, setIsLogin] = useState(false);
   const [actoken, setActoken] = useState("");
   const [reftoken, setRefctoken] = useState("");

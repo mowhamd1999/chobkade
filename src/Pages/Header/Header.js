@@ -12,7 +12,7 @@ import { CartContext } from "../../context/context-product/ContextProduct";
 import Search from "../../Components/SearchModal/Search";
 const Header = () => {
   const [open, setOpen] = useState(false);
-  const {authentication , setAuthentication} = useContext(ContextAuthProvider)
+  const { authentication, setAuthentication } = useContext(ContextAuthProvider);
   const { user, setUser } = useContext(ContextUserProvider);
   const [logout, setLogout] = useState(false);
   const { state } = useContext(CartContext);
@@ -26,13 +26,12 @@ const Header = () => {
   const logouted = (e) => {
     setLogout(true);
     setUser({});
-    setAuthentication(false)
+    setAuthentication(false);
     setTimeout(() => {
       window.location.reload();
     }, 1000);
-    navigate("/register");
+    navigate("/login");
   };
-
   return (
     <div className="header_container">
       <div className="header">

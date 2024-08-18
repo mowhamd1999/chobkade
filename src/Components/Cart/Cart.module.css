@@ -1,5 +1,5 @@
 .container{
-    border: 1px solid gray;
+    border: 1px solid #1D271E;
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: center;
     margin: 40px 0px 10px 0px;
-    border: 1px solid gray;
+    border: 1px solid #1D271E;
     width: 120px;
     height: 40px;
     align-items: center;
