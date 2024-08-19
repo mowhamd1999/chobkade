@@ -1,0 +1,42 @@
+.div {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.image_container {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.image {
+  width: 30%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+.image_text {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1d271e;
+  color: #D6CC99;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image_container:hover .image_text{
+  opacity: 1;
+}
