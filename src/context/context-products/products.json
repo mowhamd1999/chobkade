@@ -13,13 +13,13 @@
   {
     "id": 2,
     "name": "محصول 2",
-    "category": "میز غذاخوری",
+    "category": "مبل فانتزی",
     "size": "70x69x90 سانتیمتر",
     "weight": "13 کیلوگرم",
     "color": "زرد",
     "descriptions": "یک محصول عالی و با کیفیت.",
     "price": 259000,
-    "picture": "https://i.postimg.cc/SNzRJGhB/mobl.png"
+    "picture": "https://i.postimg.cc/CLXGdX0h/Frame-10.png"
   },
   {
     "id": 3,
@@ -46,13 +46,13 @@
   {
     "id": 5,
     "name": "محصول 5",
-    "category": "میز غذاخوری",
+    "category": "مبل فانتزی",
     "size": "74x66x57 سانتیمتر",
     "weight": "7 کیلوگرم",
     "color": "آبی",
     "descriptions": "کیفیت ساخت بسیار بالا.",
     "price": 505000,
-    "picture": "https://i.postimg.cc/SNzRJGhB/mobl.png"
+    "picture": "https://i.postimg.cc/CLXGdX0h/Frame-10.png"
   },
   {
     "id": 6,
@@ -79,13 +79,13 @@
   {
     "id": 8,
     "name": "محصول 8",
-    "category": "میز غذاخوری",
+    "category": "مبل فانتزی",
     "size": "67x85x84 سانتیمتر",
     "weight": "1 کیلوگرم",
     "color": "زرد",
     "descriptions": "کیفیت ساخت بسیار بالا.",
     "price": 195000,
-    "picture": "https://i.postimg.cc/SNzRJGhB/mobl.png"
+    "picture": "https://i.postimg.cc/CLXGdX0h/Frame-10.png"
   },
   {
     "id": 9,
@@ -123,13 +123,13 @@
   {
     "id": 12,
     "name": "محصول 12",
-    "category": "میز غذاخوری",
+    "category": "مبل فانتزی",
     "size": "63x82x80 سانتیمتر",
     "weight": "17 کیلوگرم",
     "color": "قهوه‌ای",
     "descriptions": "طراحی منحصر به فرد.",
     "price": 280000,
-    "picture": "https://i.postimg.cc/SNzRJGhB/mobl.png"
+    "picture": "https://i.postimg.cc/CLXGdX0h/Frame-10.png"
   },
   {
     "id": 13,
@@ -178,24 +178,24 @@
   {
     "id": 17,
     "name": "محصول 17",
-    "category": "میز غذاخوری",
+    "category": "مبل فانتزی",
     "size": "64x64x79 سانتیمتر",
     "weight": "3 کیلوگرم",
     "color": "قهوه‌ای",
     "descriptions": "کیفیت ساخت بسیار بالا.",
     "price": 218000,
-    "picture": "https://i.postimg.cc/SNzRJGhB/mobl.png"
+    "picture": "https://i.postimg.cc/CLXGdX0h/Frame-10.png"
   },
   {
     "id": 18,
     "name": "محصول 18",
-    "category": "میز غذاخوری",
+    "category": "مبل فانتزی",
     "size": "51x85x57 سانتیمتر",
     "weight": "16 کیلوگرم",
     "color": "قهوه‌ای",
     "descriptions": "کیفیت ساخت بسیار بالا.",
     "price": 346000,
-    "picture": "https://i.postimg.cc/SNzRJGhB/mobl.png"
+    "picture": "https://i.postimg.cc/CLXGdX0h/Frame-10.png"
   },
   {
     "id": 19,
@@ -409,13 +409,13 @@
   {
     "id": 38,
     "name": "محصول 38",
-    "category": "میز غذاخوری",
+    "category": "مبل فانتزی",
     "size": "56x54x59 سانتیمتر",
     "weight": "15 کیلوگرم",
     "color": "سیاه",
     "descriptions": "طراحی منحصر به فرد.",
     "price": 209000,
-    "picture": "https://i.postimg.cc/SNzRJGhB/mobl.png"
+    "picture": "https://i.postimg.cc/CLXGdX0h/Frame-10.png"
   },
   {
     "id": 39,
@@ -475,13 +475,13 @@
   {
     "id": 44,
     "name": "محصول 44",
-    "category": "میز غذاخوری",
+    "category": "مبل فانتزی",
     "size": "80x73x77 سانتیمتر",
     "weight": "10 کیلوگرم",
     "color": "آبی",
     "descriptions": "طراحی منحصر به فرد.",
     "price": 128000,
-    "picture": "https://i.postimg.cc/SNzRJGhB/mobl.png"
+    "picture": "https://i.postimg.cc/CLXGdX0h/Frame-10.png"
   },
   {
     "id": 45,

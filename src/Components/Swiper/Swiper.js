@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import "./Swiper.css";
 
 import image1 from "./../../../src/assets/img/1.png";
-import image2 from './../../../src/assets/img/profile.png'
+import image2 from './../../../src/assets/img/4.jpg'
 import image3 from './../../../src/assets/img/2.webp'
 
 
