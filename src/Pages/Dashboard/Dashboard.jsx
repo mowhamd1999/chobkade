@@ -3,7 +3,8 @@ import style from "./Dashboard.module.css";
 import { useFormik } from "formik";
 import { ContextUserProvider } from "../../context/context-user/ContextUser";
 import axios from "axios";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Dashboard = () => {
   const { user, setUser } = useContext(ContextUserProvider);
   const userId = user.id;
@@ -26,9 +27,31 @@ const Dashboard = () => {
         if (response.status === 200) {
           setUser(response.data);
           console.log("User updated:", response.data);
+          toast.success("تغییرات اعمال شد", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "inherient",
+            style: { color: "black" },
+          });
         }
       } catch (error) {
         console.error("Error updating user:", error);
+        toast.error("مشکلی در عملیات رخ داده لطفا مججد تلاش کنید", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "inherient",
+          style: { color: "black" },
+        });
       }
     },
   });
@@ -90,6 +113,18 @@ const Dashboard = () => {
           <button type="submit" className={style.btn}>ثبت تغییرات</button>
         </form>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={true}
+        closeOnClick
+        rtl
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        richColors
+      />
     </div>
   );
 };
