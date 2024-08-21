@@ -26,6 +26,7 @@
   position: relative;
   align-items: center;
   display: flex;
+  height: 545px;
 }
 .image2 {
   width: 95%;

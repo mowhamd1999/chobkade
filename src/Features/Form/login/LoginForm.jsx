@@ -11,7 +11,7 @@ import * as Yup from "yup";
 const LoginForm = () => {
   const navigate = useNavigate();
   const [token, setToken] = useState({});
-  const { user, setUser } = useContext(ContextUserProvider);
+  const { setUser } = useContext(ContextUserProvider);
   const userInfo = async (token) => {
     try {
       const response = await axios.get(

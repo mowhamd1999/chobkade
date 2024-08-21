@@ -70,7 +70,7 @@ const Header = () => {
           </div>
           {Object.entries(user).length > 0 || authentication === true ? (
             <div style={{ display: "flex", alignItems: "center" }}>
-              <Link className="join">
+              <Link to='/dashboard' className="join">
                 <span style={{ fontSize: "0.8rem" }}>{user.name}</span>
               </Link>
               <button className="logout" onClick={logouted}>
