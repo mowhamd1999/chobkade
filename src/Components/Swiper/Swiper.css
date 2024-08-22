@@ -81,3 +81,8 @@
   align-items: center;
   display: flex;
 }
+@media (max-width: 500px) {
+.slider-button{
+  font-size: 1rem;
+}
+}
