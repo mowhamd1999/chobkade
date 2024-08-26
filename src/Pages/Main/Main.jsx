@@ -23,6 +23,7 @@ const Main = () => {
         <h2 className={style.h2}>" نظر مشتریان "</h2>
         <div className={style.swiper}>
           <Swiper className={style.swiper_1} />
+          
         </div>
       </div>
     </div>
